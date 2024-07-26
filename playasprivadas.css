@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-image: url('images/bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    min-height: 43vh;
+    align-items: center;
+}
+
+.menu-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.logo {
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #266371;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons i {
+    color: #FFFFFF;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.icons i:hover {
+    color: #266371;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icon {
+    width: 25px;
+}
+
+label[for="menu"] {
+    cursor: pointer;
+    display: none;
+}
+
+/* Main Section */
+.private-beach {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.private-beach h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #266371;
+}
+
+.beach-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.beach-cards {
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    text-align: left;
+}
+
+.beach-cards img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.beach-cards h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.beach-cards p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.beach-cards:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); 
+}
+
+
+.beach-cards-container::after {
+    content: '';
+    flex: auto;
+}
+
+@media(max-width: 768px) {
+    .beach-cards {
+        width: calc(50% - 20px);
+    }
+    .beach-cards-container {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 480px) {
+    .beach-cards {
+        width: 100%;
+    }
+    .beach-cards-container {
+        justify-content: center;
+    }
+}

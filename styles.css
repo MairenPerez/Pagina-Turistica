@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url('images/bg.jpg'); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.logo {
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu .navbar ul {
+    display: flex;
+}
+
+.menu .navbar ul li {
+    position: relative;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+}
+
+.menu .navbar ul li a:hover {
+    color: #266371;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons i {
+    font-size: 25px;
+    color: #FFFFFF;
+    margin-right: 15px;
+    cursor: pointer;
+} 
+
+.icons i:hover {
+    color: #266371;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-txt {
+    width: 40%;
+}
+
+.header-txt h1 {
+    font-size: 70px;
+    line-height: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #266371;
+    margin-bottom: 25px;
+}
+
+.header-txt p {
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 18px 30px; /* Aumenté el padding horizontal para un aspecto más estilizado */
+    border-radius: 25px;
+    text-transform: uppercase;
+    color: #FFFFFF; /* Asegurando que el texto sea blanco puro */
+    background: rgba(9, 159, 166, 0.2); /* Aumenté un poco la opacidad del fondo */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(9, 159, 166, 0.3); /* Borde azulado más pronunciado */
+    transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.btn-1:hover {
+    background: rgba(9, 159, 166, 0.3); /* Fondo azulado más pronunciado al hacer hover */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    color: #e0f7fa; /* Color del texto más brillante al hacer hover */
+}
+
+.images {
+    width: 820px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.swiper-slide h3 {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.rows {
+    width: 180px;
+    position: absolute;
+    right: 620px;
+    bottom: 280px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    height: 50px;
+    width: 50px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
+@media(max-width: 991px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(9, 159, 166, 0.2); /* Fondo azulado semi-transparente */
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+        backdrop-filter: blur(10px); /* Efecto borroso */
+        border: 1px solid rgba(9, 159, 166, 0.3); /* Borde azulado */
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu .navbar ul {
+        flex-direction: column;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .header {
+        padding: 80px 30px 50px 30px;
+        align-items: self-start;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-txt {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .header-txt h1 {
+        margin-bottom: 10px;
+    }
+
+    .images {
+        position: initial;
+        width: 300px;
+        height: 300px;
+    }
+
+    .rows {
+        display: none;
+    }
+}

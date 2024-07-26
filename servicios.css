@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-image: url('images/bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    min-height: 43vh;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.logo {
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu .navbar ul {
+    display: flex;
+}
+
+.menu .navbar ul li {
+    position: relative;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+}
+
+.menu .navbar ul li a:hover {
+    color: #266371;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons i {
+    color: #FFFFFF;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.icons i:hover {
+    color: #266371;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.services {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #266371;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #ffffff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(50% - 40px);
+    transition: transform 0.3s ease;
+}
+
+.service-card i {
+    font-size: 50px;
+    color: #266371;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+@media(max-width: 768px) {
+    .service-card {
+        width: calc(100% - 40px);
+    }
+}
